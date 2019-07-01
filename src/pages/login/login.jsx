@@ -3,7 +3,9 @@ import { Form, Icon, Input, Button } from 'antd';
 
 import './login.less'
 
-import {doLogin} from "../../api/ajax";
+// import memoryUtils from '../../utils/memoryUtils';
+// import {doLogin} from "../../api/ajax";
+// import storageUtils from '../../utils/storageUtils';
 
 /**
  * 登录的路由组建
@@ -15,11 +17,17 @@ class Login extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('表单接收数据', values);
-                doLogin({method:'POST',data:values}).then(response=>{
-                    console.log(response)
-                })
+                // const response = doLogin({method:'POST',data:values})
+                // console.log(response);
+                // memoryUtils.user = {
+                //     id:1,
+                //     userName:'测试用户',
+                //     account:'15900000001'
+                // }
+                //storageUtils.saveUser(user) //保存到local中
+                this.props.history.replace('/')
             }
+
         });
     };
 
