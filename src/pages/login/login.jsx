@@ -3,6 +3,8 @@ import { Form, Icon, Input, Button } from 'antd';
 
 import './login.less'
 
+import {doLogin} from "../../api/ajax";
+
 /**
  * 登录的路由组建
  */
@@ -14,6 +16,9 @@ class Login extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('表单接收数据', values);
+                doLogin({method:'POST',data:values}).then(response=>{
+                    console.log(response)
+                })
             }
         });
     };
