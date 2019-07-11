@@ -68,3 +68,7 @@ function getDataFromServer(apiUrl, configObj) {
 export function doLogin(configObj) {
     return getDataFromServer('/user/loginVerify', configObj);
 }
+
+export function getCampusList(configObj) {
+    return getDataFromServer('/user/list',configObj)
+}

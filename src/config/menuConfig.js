@@ -294,8 +294,8 @@ const menuList = [
         children : [
             {
                 title : '角色管理',
-                key : '/roles',
-                icon : 'roles',
+                key : '/role',
+                icon : 'role',
             },
             {
                 title : '系统管理员管理',

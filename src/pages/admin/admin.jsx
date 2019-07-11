@@ -10,12 +10,14 @@ import School from '../school/school'
 import Campus from '../school/campus'
 import Facultys from '../school/facultys'
 import SchoolUsers from '../school/schoolUsers'
-import Train from '../train/train'
-import Company from '../company/company'
-import PersonalUser from '../personalUser/personalUser'
-import VirtualCompany from '../virtualCompany/virtualCompany'
-import OperationSheet from '../operationSheet/operationSheet'
-import Authority from '../authority/authority'
+// import Train from '../train/train'
+// import Company from '../company/company'
+// import PersonalUser from '../personalUser/personalUser'
+// import VirtualCompany from '../virtualCompany/virtualCompany'
+// import OperationSheet from '../operationSheet/operationSheet'
+// import Authority from '../authority/authority'
+import Role from '../authority/role'
+import SysAdmin from '../authority/sysAdmin'
 
 const { Content, Footer, Sider } = Layout;
 
@@ -36,13 +38,15 @@ export default class Admin extends Component {
                 </Sider>
                 <Layout>
                     <Header style={{ background: '#fff', padding: 0 }} >Header</Header>
-                    <Content style={{ margin: '0 16px',backgroundColor:'white'}}>
+                    <Content style={{ margin: '16px',backgroundColor:'white'}}>
                         <Switch>
                             <Route path='/home' component={Home}/>
                             <Route path='/school' component={School}/>
                             <Route path='/campus' component={Campus}/>
                             <Route path='/facultys' component={Facultys}/>
                             <Route path='/schoolUsers' component={SchoolUsers}/>
+                            <Route path='/role' component={Role}/>
+                            <Route path='/sysAdmins' component={SysAdmin}/>
                             <Redirect to='/home'/>
                         </Switch>
                     </Content>

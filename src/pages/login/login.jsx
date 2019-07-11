@@ -3,9 +3,7 @@ import { Form, Icon, Input, Button } from 'antd';
 
 import './login.less'
 
-// import memoryUtils from '../../utils/memoryUtils';
 // import {doLogin} from "../../api/ajax";
-// import storageUtils from '../../utils/storageUtils';
 
 /**
  * 登录的路由组建
@@ -20,15 +18,14 @@ class Login extends Component {
                 // const response = doLogin({method:'POST',data:values})
                 // console.log(response);
                 // memoryUtils.user = {
-                //     id:1,
-                //     userName:'测试用户',
-                //     account:'15900000001'
+                //     _id : '001',
+                //     _name:'测试用户001',
+                //     _account:'17800000001',
                 // }
-                //storageUtils.saveUser(user) //保存到local中
                 this.props.history.replace('/')
             }
-
         });
+
     };
 
     render () {

@@ -1,4 +1,5 @@
 import React from 'react'
+import './home.less'
 
 /**
  * 首页
@@ -6,7 +7,7 @@ import React from 'react'
 export default class Home extends React.Component{
     render (){
         return (
-            <div>Home</div>
+            <div className="home">首页</div>
         )
     }
 }
