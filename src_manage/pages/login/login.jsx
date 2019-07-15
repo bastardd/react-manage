@@ -1,9 +1,11 @@
 import React,{Component} from 'react'
 import { Form, Icon, Input, Button } from 'antd';
+import {connect} from 'react-redux'
 
 import './login.less'
 
 // import {doLogin} from "../../api/ajax";
+import {login} from '../../redux/actions'
 
 /**
  * 登录的路由组建
@@ -22,6 +24,10 @@ class Login extends Component {
                 //     _name:'测试用户001',
                 //     _account:'17800000001',
                 // }
+
+
+                //调用分发异步action的函数 =》 发登录请求，有了数据更新状态
+                // this.props.login(values)
                 this.props.history.replace('/')
             }
         });
@@ -73,4 +79,8 @@ class Login extends Component {
  *         高阶组件也是高阶函数：接收一个组件函数，返回一个心的组件函数
  */
 const aa = Form.create()(Login)
-export default aa;
+export default connect(
+    state => ({
+        user : state.user
+    }),{login}
+)(aa);

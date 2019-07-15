@@ -18,8 +18,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.4",
-    "store": "^2.0.12",
-    "thunk": "0.0.1"
+    "redux-thunk": "^2.3.0",
+    "store": "^2.0.12"
   },
   "scripts": {
     "start": "react-app-rewired start",

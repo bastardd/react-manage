@@ -21,7 +21,7 @@ import {increment,decrement} from '../redux/actions'
 
 /**
  * 用来将redux管理的state数据映射成UI组件的一般属性的函数
- * @param state
+ * @param state     就是store中的state
  * @returns {{count: *}}
  */
 function mapStateToProps(state) {

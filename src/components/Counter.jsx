@@ -13,7 +13,8 @@ export default class Counter extends React.Component{
     static propTypes = {
         count : PropTypes.number.isRequired,
         increment : PropTypes.func.isRequired,
-        decrement : PropTypes.func.isRequired
+        decrement : PropTypes.func.isRequired,
+        incrementAsync : PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -40,9 +41,10 @@ export default class Counter extends React.Component{
 
     incrementIfAsync = () => {
         const number = this.numRfe.current.value*1
-        setTimeout(() => {
-            this.props.increment(number)
-        },1000)
+        // setTimeout(() => {
+        //     this.props.increment(number)
+        // },1000)
+        this.props.incrementAsync(number)
 
     }
 
